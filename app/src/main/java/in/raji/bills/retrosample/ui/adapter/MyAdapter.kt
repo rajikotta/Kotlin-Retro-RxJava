@@ -1,5 +1,6 @@
-package `in`.raji.bills.retrosample
+package `in`.raji.bills.retrosample.ui.adapter
 
+import `in`.raji.bills.retrosample.R
 import `in`.raji.bills.retrosample.retro.data.Post
 import android.content.Context
 import android.support.v7.widget.RecyclerView

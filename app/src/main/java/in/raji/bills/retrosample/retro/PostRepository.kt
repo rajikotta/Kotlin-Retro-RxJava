@@ -1,4 +1,4 @@
-package `in`.raji.bills.retrosample
+package `in`.raji.bills.retrosample.retro
 
 import `in`.raji.bills.retrosample.retro.WebApi
 import `in`.raji.bills.retrosample.retro.data.Post
