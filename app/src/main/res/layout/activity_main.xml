@@ -35,6 +35,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:text="Show Post List"
         android:onClick="loadData"
         />
 </android.support.constraint.ConstraintLayout>

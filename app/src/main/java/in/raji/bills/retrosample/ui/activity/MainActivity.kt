@@ -1,12 +1,12 @@
 package `in`.raji.bills.retrosample.ui.activity
 
-import `in`.raji.bills.retrosample.ui.MainPresenter
-import `in`.raji.bills.retrosample.ui.adapter.MyAdapter
 import `in`.raji.bills.retrosample.R
 import `in`.raji.bills.retrosample.di.AppModule
 import `in`.raji.bills.retrosample.di.DaggerAppComponent
 import `in`.raji.bills.retrosample.retro.data.Post
 import `in`.raji.bills.retrosample.ui.MainContract
+import `in`.raji.bills.retrosample.ui.MainPresenter
+import `in`.raji.bills.retrosample.ui.adapter.MyAdapter
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
@@ -33,7 +33,8 @@ class MainActivity : AppCompatActivity(), MainContract.View {
                 .appModule(AppModule())
                 .build()
 
-        activityComponent.inject(this)    }
+        activityComponent.inject(this)
+    }
 
     fun loadData(v: View) {
         presenter.showPostList()
@@ -41,10 +42,14 @@ class MainActivity : AppCompatActivity(), MainContract.View {
 
 
     override fun hidebutton() {
-        super.hidebutton()
+        button.visibility = View.GONE
+        progressbar.visibility = View.VISIBLE
+
     }
 
     override fun showRecyclerView(result: List<Post>) {
+        progressbar.visibility = View.GONE
+        rv.visibility = View.VISIBLE
         val linearLayoutManager = LinearLayoutManager(this)
         linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
         rv.layoutManager = linearLayoutManager

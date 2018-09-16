@@ -5,27 +5,12 @@ import `in`.raji.bills.retrosample.retro.data.Post
 interface MainContract {
 
     interface Presenter {
-
-        fun showPostList() {
-
-        }
-
+        fun showPostList()
     }
 
     interface View {
-        fun hidebutton() {
-
-        }
-
-        fun showRecyclerView(result: List<Post>) {
-
-        }
+        fun hidebutton()
+        fun showRecyclerView(result: List<Post>)
     }
-
-    interface interactor {
-        fun makeNetworkCall() {
-
-        }
-    }
-
+    
 }
